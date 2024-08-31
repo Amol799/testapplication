@@ -5,10 +5,21 @@ import { Observable } from "rxjs";
  @Injectable()
 export class EmailService {
 
-  constructor(private http:HttpClient) { }
 
-  sendMail(user: any){
-    return this.http.post('http://localhost:3000/api/sendmail', user);
+  constructor(private http: HttpClient) {}
+
+  httpGet(url : any) {
+    return this.http.get(url);
+  }
+
+  httpPost(url :any, {}) {
+    return this.http.post(url, { name: "Subrat" });
+  }
+
+  sendEmail(url : any, data : any) {
+    console.log("email main service called  ");
+    return this.http.post(url, data);
+
   }
 }
 

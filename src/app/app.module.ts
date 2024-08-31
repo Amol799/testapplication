@@ -19,6 +19,8 @@ import { FeatureComponent } from './component/feature/feature.component';
 import { EmailComponent } from './component/email/email.component';
 import { EmailService } from './services/email.service';
 import { CommonService } from './services/common.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,11 +43,15 @@ import { CommonService } from './services/common.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-    provideClientHydration(),
     EmailService,
-    CommonService
+    CommonService,
+    provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })

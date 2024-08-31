@@ -28,15 +28,6 @@ export class EmailComponent implements OnInit {
       subject : "test",
       body : "test sample text"
     }
-  this.emailservice.sendMail(user).subscribe(
-    res => {
-      console.log("Successfully ");
-    },
-    err => {
-      console.log(err);
-    }
-  );
-
   }
 
 
