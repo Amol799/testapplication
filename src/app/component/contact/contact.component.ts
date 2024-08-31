@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit{
   email : string | undefined;
   subject : string | undefined;
   body : string | undefined
-
+  emailId : string ="akshaj.ananta.ent@gmail.com";
   constructor(private emailservice: EmailService) {
 
   }

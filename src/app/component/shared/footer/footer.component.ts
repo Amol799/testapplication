@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   copyrightYear: any = new Date().getFullYear();
-
+  emailId : string ="akshaj.ananta.ent@gmail.com";
   constructor() { }
 
   ngOnInit(): void {
