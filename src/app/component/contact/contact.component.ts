@@ -19,7 +19,9 @@ export class ContactComponent implements OnInit{
   }
 
   ngOnInit(): void {
-
+    console.log("email service called ");
+    this.SendEmail();
+    console.log("email service call End");
   }
 
 
@@ -30,7 +32,7 @@ export class ContactComponent implements OnInit{
       email: "amol.talnikar@gmail.com"
     }
     console.log("email service called Email : " + user.email + " name : " + user.name);
-    this.emailservice.sendEmail("http://localhost:8081/sendmail", user).subscribe(
+    this.emailservice.sendEmail("https://mailserver-x9g9.onrender.com/sendmail", user).subscribe(
       data => {
         let res:any = data;
         console.log(
