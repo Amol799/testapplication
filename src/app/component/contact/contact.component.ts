@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit{
-  name : string | undefined;
-  email : string | undefined;
-  subject : string | undefined;
-  body : string | undefined
+  Client_name : string | undefined;
+  Client_email : string | undefined;
+  Client_subject : string | undefined;
+  Client_body : string | undefined
   emailId : string ="akshaj.ananta.ent@gmail.com";
   constructor(private emailservice: EmailService) {
 
@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit{
 
   ngOnInit(): void {
     console.log("email service called ");
-    this.SendEmail();
+   // this.SendEmail();
     console.log("email service call End");
   }
 
@@ -28,11 +28,14 @@ export class ContactComponent implements OnInit{
   SendEmail() {
 
     let user = {
-      name: "Amol sarkate",
-      email: "amol.talnikar@gmail.com"
+      name: this.Client_name,
+      email: this.Client_email,
+      subject : this.Client_subject,
+      body : this.Client_body,
+      defaultEmail : 'amol.d.sarkate@gmail.com'
     }
     console.log("email service called Email : " + user.email + " name : " + user.name);
-    this.emailservice.sendEmail("https://mailserver-x9g9.onrender.com/sendmail", user).subscribe(
+    this.emailservice.sendEmail("http://localhost:8081/sendmail", user).subscribe(
       data => {
         let res:any = data;
         console.log(

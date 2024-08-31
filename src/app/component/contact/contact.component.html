@@ -31,7 +31,9 @@
                       <div class="border py-5 px-3">
                           <i class="fa fa-envelope fa-3x text-dark mb-4"></i>
                           <h4 class="fw-light">Mail Us</h4>
-                          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akshaj.ananta.ent@gmail.com" target="_blank">{{emailId}}</a>
+                          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akshaj.ananta.ent@gmail.com">
+                            {{emailId}}
+                          </a>
                       </div>
                   </div>
               </div>
@@ -50,37 +52,37 @@
               <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
                   <p class="mb-4">For query or any information please fill the below form. shortly we will contct you.</p>
                   <div class="wow fadeIn" data-wow-delay="0.3s">
-                      <form>
+                      <!-- <form> -->
                           <div class="row g-3">
                               <div class="col-md-6">
                                   <div class="form-floating">
-                                      <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                      <input type="text" class="form-control" id="name"  [(ngModel)]="Client_name" placeholder="Your Name">
                                       <label for="name">Your Name</label>
                                   </div>
                               </div>
                               <div class="col-md-6">
                                   <div class="form-floating">
-                                      <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                      <input type="email" class="form-control" id="email" [(ngModel)]="Client_email" placeholder="Your Email">
                                       <label for="email">Your Email</label>
                                   </div>
                               </div>
                               <div class="col-12">
                                   <div class="form-floating">
-                                      <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                      <input type="text" class="form-control" id="subject" [(ngModel)]="Client_subject" placeholder="Subject">
                                       <label for="subject">Subject</label>
                                   </div>
                               </div>
                               <div class="col-12">
                                   <div class="form-floating">
-                                      <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                      <textarea class="form-control" [(ngModel)]="Client_body" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
                                       <label for="message">Message</label>
                                   </div>
                               </div>
                               <div class="col-12">
-                                  <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                  <button class="btn btn-primary w-100 py-3" (click)="SendEmail()">Send Message</button>
                               </div>
                           </div>
-                      </form>
+                      <!-- </form> -->
                   </div>
               </div>
               <div class="col-lg-5 wow fadeIn" data-wow-delay="0.5s">
