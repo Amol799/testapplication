@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
@@ -21,6 +21,8 @@ import { EmailService } from './services/email.service';
 import { CommonService } from './services/common.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './component/cart/cart.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     BlogComponent,
     NewsletterComponent,
     FeatureComponent,
-    EmailComponent
+    EmailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    CommonModule
   ],
   providers: [
     EmailService,

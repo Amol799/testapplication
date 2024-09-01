@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { CarouselModel } from '../../model/carousselmodel';
 import { EmailService } from '../../services/email.service';
 import { error } from 'console';
+import { Cart } from '../../model/cart.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -11,12 +13,18 @@ import { error } from 'console';
 })
 export class ProductComponent {
 
- constructor(){
+  cartTxt : string = "Add to Cart";
+  constructor(private cartsvc : CartService){
 
- }
+  }
 
- updatedProduct() {
+  updatedProduct() {
 
-}
+  }
+  addToCart(Item : any){
+    this.cartsvc.addToCart(Item);
+    Cart.count = Cart.count+ 1;
+    Item.target.innerHTML = "See Cart";
+  }
 
 }

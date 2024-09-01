@@ -12,14 +12,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto bg-success">
-                  <a href="https://wa.link/ob8idv" class="active d-lg-inline-block fa-1x nav-item nav-link" style=""><i  aria-hidden="true" class="fa fa-whatsapp"></i> Chat</a>
+                  <button class="btn btn-warning" routerLink="/cart">
+                    <i class=" nav-item fa-2x fa fa-cart-plus"></i>
+                    <div style="font-size: 10px;" class="badge bg-success">{{tatalCartItem}}</div>
+                  </button>
+                    <a href="https://wa.link/ob8idv" class="active d-lg-inline-block fa-1x nav-item nav-link" style=""><i  aria-hidden="true" class="fa fa-whatsapp"></i> Chat</a>
                     <a href="/" class="nav-item nav-link ">Home</a>
                     <a href="/about" class="nav-item nav-link ">About</a>
                     <a href="/products" class="nav-item nav-link">Products</a>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
-                    <div>
-                      <i class=" nav-item nav-link fa fa-shopping-cart" aria-hidden="true"></i>
-                    </div>
+
+
                     <!-- <div class="nav-item dropdown">
                       <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                       <div class="dropdown-menu bg-light mt-2">

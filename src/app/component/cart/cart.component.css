@@ -1,0 +1,10 @@
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ text-align:center;
+ transform: translate(-50%,-50%);
+}
+h4,h6{
+  font-weight: 500;
+}

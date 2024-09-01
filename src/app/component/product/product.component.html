@@ -171,9 +171,14 @@
                   </div>
                   <a href="" class="h6 d-inline-block mb-2">Oil</a>
                   <h5 class="text-primary mb-3"> ₹ 99.99</h5>
-                  <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
+                  <button type="button" (click)="addToCart($event)"  class="btn btn-primary btn-block btn-lg" id="idx">{{cartTxt}}</button>
+                  <button type="button" (click)="addToCart($event)" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
+                    {{cartTxt}}
+                   </button>
+
               </div>
           </div>
+
           <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
               <div class="product-item text-center border h-100 p-4">
                   <img class="img-fluid mb-4" src="/assets/Images/bottle-main-1.png" alt="">
@@ -203,7 +208,7 @@
                   </div>
                   <a href="" class="h6 d-inline-block mb-2">Oil</a>
                   <h5 class="text-primary mb-3"> ₹ 99.99</h5>
-                  <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
+                  <button type="button" (click)="addToCart($event)"  class="btn btn-primary btn-block btn-lg" id="idx">{{cartTxt}}</button>
               </div>
           </div>
       </div>
