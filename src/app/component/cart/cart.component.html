@@ -1,45 +1,39 @@
-<ng-container *ngIf="true">
-  <div class="card-table">
-    <div class="card-product">
-      <table class="table table-responsive">
-        <thead>
-          <tr>
-            <th> Sr No</th>
-            <th> Prodct</th>
-            <th> Image </th>
-            <th> discription</th>
-            <th> price</th>
-            <th> Qty</th>
-            <th> Total</th>
-            <th>action</th>
-          </tr>
-         </thead>
-         <tbody>
-          <tr>
-            <td> 1</td>
-            <td> Prodct</td>
-            <td> Image </td>
-            <td> discription</td>
-            <td> price</td>
-            <td> Qty</td>
-            <td> Total</td>
-            <td>
-              <button class="btn btn-danger "><i class="fa fa-trash"></i></button>
-            </td>
-          </tr>
-         </tbody>
-      </table>>
-
-    </div>
-
+<div class="cart_section cart_item p-0 ">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="offset-lg-1">
+              <div class="cart_container">
+                  <div class="cart_title">Shopping Cart<small> ({{totalCartItem}} item in cart) </small></div>
+                  <div class="cart_items">
+                      <ul class="cart_list">
+                        <ng-template ngFor let-item [ngForOf]="productList">
+                          <li class="cart_item clearfix">
+                              <div class="cart_item_image"><img style="height: inherit;" src="{{item.image}}" alt=""></div>
+                              <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                  <div class="cart_item_name cart_info_col">
+                                      <div class="cart_item_title">Product :  {{item.title}} </div>
+                                      <div class="cart_item_title">Quantity :  1 </div>
+                                      <div class="cart_item_title">Price :  {{item.price}}</div>
+                                  </div>
+                              </div>
+                          </li>
+                          <hr>
+                        </ng-template>
+                      </ul>
+                  </div>
+                  <div class="order_total">
+                      <div class="order_total_content text-md-right">
+                          <div class="order_total_title">Order Total:</div>
+                          <div class="order_total_amount">₹ {{grandTotal}}</div>
+                      </div>
+                  </div>
+                  <div class="cart_buttons">
+                    <!-- <button type="button" (click)="addToCart(item, $event)"  class="btn btn-primary btn-block btn-lg" id="idx">{{cartTxt}}</button> -->
+                    <button type="button" class="btn btn-primary btn-block btn-lg button cart_button_clear">Do Shopping</button>
+                     <button type="button" class=" btn btn-primary btn-block btn-lg button cart_button_checkout">Buy Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-</ng-container>
-
-
-<div *ngIf="false" class="center">
-  <h3> your cart is empty !</h3>
-  <h4>add item to cart</h4>
-  <button routerLink="/products" class="btn btn-success">
-show  now
-  </button>
 </div>
