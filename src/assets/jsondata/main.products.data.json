@@ -1,0 +1,27 @@
+[
+
+  {
+    "id": 2,
+    "title": "Safflower Oil 1000 ML",
+    "price": 280.00,
+    "description": "Safflower Oil",
+    "category": "Oil",
+    "image": "/assets/Images/products/product-safflower-1000ml.jpg",
+    "rating": {
+      "rate": 4.1,
+      "count": 259
+    }
+  },
+  {
+    "id": 1,
+    "title": "Groundnut Oil 1000 ML",
+    "price": 380.00,
+    "description": "Groundnut Oil",
+    "category": "Oil",
+    "image": "/assets/Images/products/product-safflower-1000ml.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  }
+]

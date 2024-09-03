@@ -1,30 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CarouselModel } from '../../model/carousselmodel';
 import { EmailService } from '../../services/email.service';
 import { error } from 'console';
 import { Cart } from '../../model/cart.model';
 import { CartService } from '../../services/cart.service';
+import { CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
-export class ProductComponent {
-
+export class ProductComponent implements OnInit {
+  public productList : any;
   cartTxt : string = "Add to Cart";
-  constructor(private cartsvc : CartService){
+  constructor(private cartsvc : CartService, private commnsvc: CommonService){
 
+  }
+  ngOnInit(): void {
+    this.commnsvc.getPopularProduct().subscribe(data =>{
+      this.productList = data;
+    })
   }
 
   updatedProduct() {
 
   }
-  addToCart(Item : any){
-    this.cartsvc.addToCart(Item);
-    Cart.count = Cart.count+ 1;
-    Item.target.innerHTML = "See Cart";
+
+  addToCart(item : any , event : any){
+    this.cartsvc.addToCart(item);
+    event.target.innerHTML = "See Cart";
+    console.log("event");
   }
 
 }

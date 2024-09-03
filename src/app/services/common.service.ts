@@ -9,12 +9,13 @@ import { CarouselModel } from '../model/carousselmodel';
 export class CommonService {
 
   constructor(private http: HttpClient) {
-      this.getJSON().subscribe(data => {
-        //  console.log(data);
-      });
+
   }
 
-  public getJSON(): Observable<any> {
+  public getAllProduct(): Observable<any> {
       return this.http.get("./assets/jsondata/products.data.json");
   }
+  public getPopularProduct(): Observable<any> {
+    return this.http.get("./assets/jsondata/main.products.data.json");
+}
 }
