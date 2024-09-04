@@ -41,7 +41,7 @@
     "price": 199.00,
     "description": "Groundnut Oil",
     "category": "Oil",
-    "image": "/assets/Images/products/product-safflower-500ml.jpg",
+    "image": "/assets/Images/products/product-groundnut-500ml.jpg",
     "rating": {
       "rate": 2.1,
       "count": 430
@@ -53,7 +53,7 @@
     "price": 380.00,
     "description": "Groundnut Oil",
     "category": "Oil",
-    "image": "/assets/Images/products/product-safflower-1000ml.jpg",
+    "image": "/assets/Images/products/product-groundnut-1000ml.jpg",
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -65,7 +65,7 @@
     "price": 1100.0,
     "description": "Groundnut Oil",
     "category": "Oil",
-    "image": "/assets/Images/products/product-safflower-5000ml.jpg",
+    "image": "/assets/Images/products/product-groundnut-5000ml.jpg",
     "rating": {
       "rate": 4.1,
       "count": 259
