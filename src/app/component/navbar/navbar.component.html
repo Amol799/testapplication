@@ -20,11 +20,11 @@
                     <a routerLink="/contact" class="nav-item nav-link">Contact</a>
 
 
-                    <button class="btn btnsize btn-group btn-outline-light me-md-2" data-bs-toggle="tooltip"  data-bs-target="#staticBackdrop" >
+                    <button class="btn btnsize btn-group btn-outline-light me-md-2" data-bs-toggle="modal"  data-bs-target="#login-popup" >
                       <i class=" nav-item fa-2x fa fa-user-o"></i>
                     </button>
 
-                    <button class="btn btnsize btn-group btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button class="btn btnsize btn-group btn-outline-warning" data-bs-toggle="modal" data-bs-target="#cart-popup">
                       <i class=" nav-item fa-2x fa fa-cart-plus"></i>
                       <div style="font-size: 10px;" class="badge bg-success">{{tatalCartItem}}</div>
                     </button>
@@ -37,8 +37,8 @@
 </div>
 <!-- Navbar End -->
 
-<!-- popup -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- cart popup -->
+<div class="modal fade" id="cart-popup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" style="margin-right: 1.3%;margin-top: 5%;">
     <div class="modal-content">
       <div class="modal-header">
@@ -50,3 +50,25 @@
     </div>
   </div>
 </div>
+
+<!-- login popup -->
+<div class="modal fade" id="login-popup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+
+        </div> -->
+        <div class="modal-body" style="padding:0">
+
+          <app-login></app-login>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Login in</button>
+          <button type="button" class="btn btn-primary">Cancel</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
