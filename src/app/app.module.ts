@@ -23,6 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './component/cart/cart.component';
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from './component/user/login/login.component';
+import { RegistrationComponent } from './component/user/registration/registration.component';
+import { ErrorComponent } from './component/user/error/error.component';
+import { ProfileComponent } from './component/user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { CommonModule } from '@angular/common';
     NewsletterComponent,
     FeatureComponent,
     EmailComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    RegistrationComponent,
+    ErrorComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
