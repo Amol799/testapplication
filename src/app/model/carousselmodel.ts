@@ -6,3 +6,8 @@ export interface CarouselModel{
   imgpath:string;
   discription:string;
  }
+
+ export interface User {
+  username : string;
+  password: string;
+}
