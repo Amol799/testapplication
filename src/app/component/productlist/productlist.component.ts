@@ -12,6 +12,7 @@ export class ProductlistComponent implements OnInit {
 
   cartTxt :string ="Add to cart"
   public productList : any;
+  public disable : boolean = true
   constructor(private commnsvc : CommonService,private cartsvc: CartService){
 
   }

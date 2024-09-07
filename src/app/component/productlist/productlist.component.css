@@ -2,3 +2,16 @@ img:hover{
   transition: 00.3s ease-in-out;
   transform: scale(1.1);
 }
+a.anchor-disable {
+  color: black;
+  cursor: text;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+
+a.disabled {
+  color: gray;
+  cursor: not-allowed;
+  text-decoration: underline;
+}
