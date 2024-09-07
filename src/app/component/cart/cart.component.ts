@@ -20,7 +20,8 @@ export class CartComponent implements OnInit {
          this.totalCartItem = res.length;
 
          this.productList.map((a:any) => {
-          this.grandTotal += a.price;
+          this.grandTotal += a.mrpprice - (a.mrpprice/100 * a.discount);
+
         })
 
       }

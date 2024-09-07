@@ -13,7 +13,7 @@
                                   <div class="cart_item_name cart_info_col">
                                       <div class="cart_item_title">Product :  {{item.title}} </div>
                                       <div class="cart_item_title">Quantity :  1 </div>
-                                      <div class="cart_item_title">Price :  {{item.price}}</div>
+                                      <div class="cart_item_title">Price :  {{ item.mrpprice - (item.mrpprice/100 * item.discount)}}</div>
                                   </div>
                               </div>
                           </li>

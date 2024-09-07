@@ -13,6 +13,7 @@ export class ProductlistComponent implements OnInit {
   cartTxt :string ="Add to cart"
   public productList : any;
   public disable : boolean = true
+  public isCartVisible : boolean = false;
   constructor(private commnsvc : CommonService,private cartsvc: CartService){
 
   }
@@ -23,8 +24,14 @@ export class ProductlistComponent implements OnInit {
   }
 
   addToCart(item : any , event : any){
-    this.cartsvc.addToCart(item);
-    event.target.innerHTML = "See Cart";
+
+    if(!this.isCartVisible){
+      this.cartsvc.addToCart(item);
+      this.isCartVisible  = true;
+
+    }
     console.log("event");
+    event.target.innerHTML = "See Cart";
+
   }
 }
