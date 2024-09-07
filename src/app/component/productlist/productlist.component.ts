@@ -24,14 +24,20 @@ export class ProductlistComponent implements OnInit {
   }
 
   addToCart(item : any , event : any){
+    // this.productList.map((a:any, index:any) => {
+    //   if(item.id == a.id){
+    //     this.isCartVisible = true;
+    //   }
+    // });
 
-    if(!this.isCartVisible){
+    // if(!this.isCartVisible){
       this.cartsvc.addToCart(item);
       this.isCartVisible  = true;
+      console.log("event");
+      event.target.innerHTML = "See Cart";
 
-    }
-    console.log("event");
-    event.target.innerHTML = "See Cart";
+    // }
+
 
   }
 }
