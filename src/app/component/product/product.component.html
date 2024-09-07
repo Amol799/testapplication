@@ -31,10 +31,9 @@
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <h1 class="text-primary mb-4">Healthy Oil </h1>
                 <h1 class="text-primary mb-4">Safflower Oil <span class="fw-light text-dark">Safflower Oil</span></h1>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus. Praesent tristique odio ut rutrum pellentesque. Fusce eget molestie est, at rutrum est.</p>
-                <p class="mb-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no
-                    labore lorem sit. Sanctus clita duo justo et tempor.</p>
-                <a class="btn btn-primary py-2 px-4" href="">Shop Now</a>
+                <p class="mb-4">Safflower oil is a popular cooking oil that comes from the seeds of the safflower plant. Some research suggests it may have some health benefits when people use it in the diet and on the skin.</p>
+                <p class="mb-4">Safflower oil may be a more healthful option than olive oil when cooking at high temperatures, thanks to its high smoke point and neutral flavor.</p>
+                <a class="btn btn-primary py-2 px-4" routerLink="/products">Shop Now</a>
             </div>
         </div>
     </div>
@@ -47,7 +46,8 @@
       <div class="container">
           <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
               <h1 class="text-primary mb-3"><span class="fw-light text-dark">Best Benefits Of Our</span> Natural Cold Pressed Oil</h1>
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+              <p class="mb-5">Cold-pressed oil is oil that's extracted from nuts, seeds, or other oil-rich sources using mechanical pressure at a low temperature, without the use of heat or chemicals. The low temperature helps preserve the oil's nutritional profile, flavor, and aroma.
+              </p>
           </div>
           <div class="row g-4 align-items-center">
               <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
@@ -139,7 +139,7 @@
   <div class="container">
       <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
           <h1 class="text-primary mb-3"><span class="fw-light text-dark">Our Natural</span> Cold Pressed Oil Popular Products</h1>
-          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+          <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p> -->
       </div>
       <div class="row g-4 justify-content-center">
         <ng-template ngFor let-item [ngForOf]="productList">
@@ -152,7 +152,7 @@
                     <small class="fa fa-star text-primary"></small>
                     <small class="fa fa-star text-primary"></small>
                     <small class="fa fa-star text-primary"></small>
-                    <small>(99)</small>
+                    <!-- <small>(99)</small> -->
                 </div>
                 <h5 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100ch" > {{item.title}}</h5>
                 <p routerLink="" style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100ch;" class="h6 d-inline-block mb-2">{{item.description}}</p>
