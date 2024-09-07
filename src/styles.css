@@ -427,3 +427,9 @@ img.animated.pulse {
   padding-right: 0;
   border-right: none;
 }
+
+a.disabled {
+  color: gray;
+  cursor: not-allowed;
+  text-decoration: underline;
+}
