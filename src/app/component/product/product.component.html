@@ -156,9 +156,17 @@
                 </div>
                 <h5 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100ch" > {{item.title}}</h5>
                 <p routerLink="" style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;max-width: 100ch;" class="h6 d-inline-block mb-2">{{item.description}}</p>
-                <h5 class="text-primary mb-3"> ₹ {{ item.price}}</h5>
-                <button type="button" (click)="addToCart(item, $event)"  class="btn btn-primary btn-block btn-lg" id="idx">{{cartTxt}}</button>
-
+                <div class="row justify-content-center">
+                  <h5 class=" col-3 text-primary mb-3"> ₹{{  item.mrpprice - (item.mrpprice/100 * item.discount)}} </h5>
+                  <h5 class="col-3 text-primary  text-bg-light" style="text-decoration: line-through;"> ₹{{ item.mrpprice}}</h5>
+                  <h5 class="col-6 text-success text-bg-light" >{{ item.discount +"% Discount"}}</h5>
+                </div>
+                <button
+                    type="button"
+                    (click)="addToCart(item, $event)"
+                    class="btn btn-primary btn-block btn-lg"
+                    id="idx">{{cartTxt}}
+                  </button>
             </div>
         </div>
         </ng-template>

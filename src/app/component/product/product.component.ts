@@ -13,14 +13,20 @@ import { CommonService } from '../../services/common.service';
   styleUrl: './product.component.css'
 })
 export class ProductComponent implements OnInit {
-  public productList : any;
+  public productList : any =[];
   cartTxt : string = "Add to Cart";
   constructor(private cartsvc : CartService, private commnsvc: CommonService){
 
   }
   ngOnInit(): void {
-    this.commnsvc.getPopularProduct().subscribe(data =>{
-      this.productList = data;
+    this.commnsvc.getAllProduct().subscribe(
+      data =>{
+       data.map((item:any, index:any) => {
+        if(item.mianProduct == true){
+          this.productList.push(item);
+        }
+      });
+      ;
     })
   }
 
