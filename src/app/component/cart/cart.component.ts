@@ -13,6 +13,9 @@ export class CartComponent implements OnInit {
   constructor(private cartsvc: CartService){}
 
   ngOnInit(): void {
+    this.getCartProducts();
+  }
+  getCartProducts(){
     this.cartsvc.getProducts().subscribe(
       res =>{
         this.grandTotal = 0;
@@ -20,13 +23,21 @@ export class CartComponent implements OnInit {
          this.totalCartItem = res.length;
 
          this.productList.map((a:any) => {
-          this.grandTotal += a.mrpprice - (a.mrpprice/100 * a.discount);
+          this.grandTotal += Math.round( (a.mrpprice - (a.mrpprice/100 * a.discount)) * a.cartCount);
 
         })
 
       }
     )
-    console.log(this.productList);
+  }
+  UpdatePlusCart(item : any){
+    item.cartCount =  item.cartCount-1
+    this.getCartProducts();
   }
 
+  UpdateMinusCart(item : any){
+    item.cartCount =  item.cartCount+1
+    this.getCartProducts()
+
+  }
 }

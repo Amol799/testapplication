@@ -13,7 +13,7 @@ export class ProductlistComponent implements OnInit {
   cartTxt :string ="Add to cart"
   public productList : any;
   public disable : boolean = true
-  public isCartVisible : boolean = false;
+  public isCartVisible : boolean = true;
   constructor(private commnsvc : CommonService,private cartsvc: CartService){
 
   }
@@ -29,15 +29,21 @@ export class ProductlistComponent implements OnInit {
     //     this.isCartVisible = true;
     //   }
     // });
+    //this.checkExistInCart(item)
 
-    // if(!this.isCartVisible){
+     if(this.isCartVisible){
       this.cartsvc.addToCart(item);
       this.isCartVisible  = true;
       console.log("event");
       event.target.innerHTML = "See Cart";
-
-    // }
-
-
+     }
   }
+
+  // checkExistInCart(cartItem:any) {
+  //   var exist=this.productList.some((item : any) =>{
+  //     if(item.id.includes(cartItem.id)){
+  //       this.isCartVisible= true;
+  //     }
+  //   });
+  // }
 }

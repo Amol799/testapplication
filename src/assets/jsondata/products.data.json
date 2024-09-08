@@ -8,6 +8,7 @@
     "category": "Oil",
     "image": "/assets/Images/products/product-safflower-500ml.jpg",
     "mianProduct" : false,
+    "cartCount" : 1,
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -22,6 +23,7 @@
     "category": "Oil",
     "image": "/assets/Images/products/product-safflower-1000ml.jpg",
     "mianProduct" : true,
+    "cartCount" : 1,
     "rating": {
       "rate": 4.1,
       "count": 259
@@ -36,6 +38,7 @@
     "category": "Oil",
     "image": "/assets/Images/products/product-safflower-5000ml.jpg",
     "mianProduct" : false,
+    "cartCount" : 1,
     "rating": {
       "rate": 4.7,
       "count": 500
@@ -50,6 +53,7 @@
     "category": "Oil",
     "image": "/assets/Images/products/product-groundnut-500ml.jpg",
     "mianProduct" : false,
+    "cartCount" : 1,
     "rating": {
       "rate": 2.1,
       "count": 430
@@ -64,6 +68,7 @@
     "category": "Oil",
     "image": "/assets/Images/products/product-groundnut-1000ml.jpg",
     "mianProduct" : true,
+    "cartCount" : 1,
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -78,6 +83,7 @@
     "category": "Oil",
     "image": "/assets/Images/products/product-groundnut-5000ml.jpg",
     "mianProduct" : false,
+    "cartCount" : 1,
     "rating": {
       "rate": 4.1,
       "count": 259
