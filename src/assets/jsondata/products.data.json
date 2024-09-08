@@ -9,6 +9,7 @@
     "image": "/assets/Images/products/product-safflower-500ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -24,6 +25,7 @@
     "image": "/assets/Images/products/product-safflower-1000ml.jpg",
     "mianProduct" : true,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 4.1,
       "count": 259
@@ -39,6 +41,7 @@
     "image": "/assets/Images/products/product-safflower-5000ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 4.7,
       "count": 500
@@ -54,6 +57,7 @@
     "image": "/assets/Images/products/product-groundnut-500ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 2.1,
       "count": 430
@@ -69,6 +73,7 @@
     "image": "/assets/Images/products/product-groundnut-1000ml.jpg",
     "mianProduct" : true,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -84,6 +89,7 @@
     "image": "/assets/Images/products/product-groundnut-5000ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 4.1,
       "count": 259

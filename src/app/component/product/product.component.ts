@@ -37,7 +37,6 @@ export class ProductComponent implements OnInit {
   addToCart(item : any , event : any){
     this.cartsvc.addToCart(item);
     event.target.innerHTML = "See Cart";
-    console.log("event");
   }
 
 }

@@ -18,32 +18,21 @@ export class ProductlistComponent implements OnInit {
 
   }
   ngOnInit(): void {
-     this.commnsvc.getAllProduct().subscribe(data =>{
-       this.productList = data;
-     })
+    this.GetAllProduct();
   }
 
   addToCart(item : any , event : any){
-    // this.productList.map((a:any, index:any) => {
-    //   if(item.id == a.id){
-    //     this.isCartVisible = true;
-    //   }
-    // });
-    //this.checkExistInCart(item)
-
      if(this.isCartVisible){
+      //item.mainbtnlabel = "See Cart";
       this.cartsvc.addToCart(item);
       this.isCartVisible  = true;
-      console.log("event");
       event.target.innerHTML = "See Cart";
+      // this.GetAllProduct();
      }
   }
-
-  // checkExistInCart(cartItem:any) {
-  //   var exist=this.productList.some((item : any) =>{
-  //     if(item.id.includes(cartItem.id)){
-  //       this.isCartVisible= true;
-  //     }
-  //   });
-  // }
+  GetAllProduct(){
+    this.commnsvc.getAllProduct().subscribe(data =>{
+      this.productList = data;
+    })
+  }
 }

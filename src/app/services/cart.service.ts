@@ -9,10 +9,10 @@ export class CartService {
 
   public cartItemList : any =[];
   public productList  = new BehaviorSubject<any>([]);
+  public isProdAvalInCart : boolean = false;
   constructor() { }
 
   getProducts(){
-    console.log(this.productList);
     return this.productList.asObservable();
   }
   setProduct(product :any){
@@ -20,10 +20,17 @@ export class CartService {
     this.productList.next(product);
   }
   addToCart(product : any){
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.getTotalPrice();
-    console.log(this.cartItemList);
+    this.cartItemList.map((a: any, index: any) => {
+      if(JSON.stringify(a) === JSON.stringify(product)){
+       this.isProdAvalInCart = true;
+      }
+    });
+
+    if(!this.isProdAvalInCart){
+      this.cartItemList.push(product);
+      this.productList.next(this.cartItemList);
+      this.getTotalPrice();
+    }
   }
   getTotalPrice(){
     let grandtotal = 0;
@@ -43,5 +50,4 @@ export class CartService {
     this.cartItemList= [];
     this.productList.next(this.cartItemList);
   }
-
 }
