@@ -21,12 +21,9 @@ export class CartComponent implements OnInit {
         this.grandTotal = 0;
          this.productList = res;
          this.totalCartItem = res.length;
-
          this.productList.map((a:any) => {
           this.grandTotal += Math.round( (a.mrpprice - (a.mrpprice/100 * a.discount)) * a.cartCount);
-
         })
-
       }
     )
   }
@@ -36,11 +33,13 @@ export class CartComponent implements OnInit {
   }
 
   UpdateMinusCart(item : any){
+    if(item.cartCount )
     item.cartCount =  item.cartCount+1
     this.getCartProducts()
-
   }
+
   DeleteItemFromCart(item : any){
+    item.mainbtnlabel = "Add Cart";
     this.cartsvc.removeCartItem(item);
   }
 }

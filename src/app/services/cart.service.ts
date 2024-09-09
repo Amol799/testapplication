@@ -31,6 +31,7 @@ export class CartService {
       this.productList.next(this.cartItemList);
       this.getTotalPrice();
     }
+    this.isProdAvalInCart= false;
   }
   getTotalPrice(){
     let grandtotal = 0;

@@ -23,7 +23,7 @@ export class ProductlistComponent implements OnInit {
 
   addToCart(item : any , event : any){
      if(this.isCartVisible){
-      //item.mainbtnlabel = "See Cart";
+      item.mainbtnlabel = "See Cart";
       this.cartsvc.addToCart(item);
       this.isCartVisible  = true;
       event.target.innerHTML = "See Cart";
