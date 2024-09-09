@@ -9,6 +9,7 @@
     "image": "/assets/Images/products/product-safflower-500ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -24,6 +25,7 @@
     "image": "/assets/Images/products/product-safflower-1000ml.jpg",
     "mianProduct" : true,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 4.1,
       "count": 259
@@ -39,6 +41,7 @@
     "image": "/assets/Images/products/product-safflower-5000ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 4.7,
       "count": 500
@@ -54,13 +57,14 @@
     "image": "/assets/Images/products/product-groundnut-500ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 2.1,
       "count": 430
     }
   },
   {
-    "id": 1,
+    "id": 5,
     "title": "Groundnut Oil 1Ltr",
     "discount": 20,
     "mrpprice": 420.00,
@@ -69,13 +73,14 @@
     "image": "/assets/Images/products/product-groundnut-1000ml.jpg",
     "mianProduct" : true,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 3.9,
       "count": 120
     }
   },
   {
-    "id": 2,
+    "id": 6,
     "title": "Groundnut Oil 5Ltr",
     "discount": 20,
     "mrpprice": 1999.00,
@@ -84,6 +89,7 @@
     "image": "/assets/Images/products/product-groundnut-5000ml.jpg",
     "mianProduct" : false,
     "cartCount" : 1,
+    "mainbtnlabel" : "add cart",
     "rating": {
       "rate": 4.1,
       "count": 259

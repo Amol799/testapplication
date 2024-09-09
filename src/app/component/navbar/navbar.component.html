@@ -4,42 +4,30 @@
         <nav class="navbar navbar-expand-lg navbar-light p-0">
             <a routerLink="/home" class="navbar-brand">
               <img class="img-fluid " style="height: 60px;" src="assets/Images/main_logo.png" alt="">
-
             </a>
             <div class="m-1">
-              <button class="disabled linkDisabled btn btnsize btn-group btn-outline-light me-md-2 m-1" data-bs-toggle="modal"  data-bs-target="#login-popup" >
+              <button class="disabled btn btnsize btn-group btn-outline-light me-md-2 m-1" data-bs-toggle="modal"  data-bs-target="#login-popup" >
                 <i class=" nav-item fa-2x fa fa-user-o"></i>
               </button>
-
-
               <a  href="https://wa.link/sn1ofe" class="btn btnsize btn-group btn-outline-light m-1">
                 <i  aria-hidden="true" class="fa fa-2x fa-whatsapp "></i>
-
               </a>
               <button class="btn btnsize btn-group btn-outline-light m-1" data-bs-toggle="modal" data-bs-target="#cart-popup">
                 <i class=" nav-item fa-2x fa fa-cart-plus"></i>
                 <div style="font-size: 10px;" class="badge bg-success">{{tatalCartItem}}</div>
               </button>
             </div>
-
-
             <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto bg-success">
-
-                    <!-- <a href="https://wa.link/ob8idv" class="active d-lg-inline-block fa-1x nav-item nav-link" style=""> Chat</a> -->
                     <a routerLink="/" class="nav-item nav-link ">Home</a>
                     <a routerLink="/about" class="nav-item nav-link ">About</a>
                     <a routerLink="/products" class="nav-item nav-link">Products</a>
                     <a routerLink="/contact" class="nav-item nav-link">Contact</a>
-
-
-
-                </div>
-
+                  </div>
             </div>
         </nav>
     </div>
@@ -65,17 +53,9 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-dialog">
       <div class="modal-content">
-        <!-- <div class="modal-header">
-
-        </div> -->
         <div class="modal-body" style="padding:0">
-
           <app-login></app-login>
         </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Login in</button>
-          <button type="button" class="btn btn-primary">Cancel</button>
-        </div> -->
       </div>
     </div>
   </div>

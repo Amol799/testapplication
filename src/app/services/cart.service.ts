@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,10 @@ export class CartService {
 
   public cartItemList : any =[];
   public productList  = new BehaviorSubject<any>([]);
-  constructor() { }
+  public isProdAvalInCart : boolean = false;
+  constructor(private http :HttpClient) { }
 
   getProducts(){
-    console.log(this.productList);
     return this.productList.asObservable();
   }
   setProduct(product :any){
@@ -20,10 +21,18 @@ export class CartService {
     this.productList.next(product);
   }
   addToCart(product : any){
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.getTotalPrice();
-    console.log(this.cartItemList);
+    this.cartItemList.map((a: any, index: any) => {
+      if(JSON.stringify(a) === JSON.stringify(product)){
+       this.isProdAvalInCart = true;
+      }
+    });
+
+    if(!this.isProdAvalInCart){
+      this.cartItemList.push(product);
+      this.productList.next(this.cartItemList);
+      this.getTotalPrice();
+    }
+    this.isProdAvalInCart= false;
   }
   getTotalPrice(){
     let grandtotal = 0;
@@ -43,5 +52,7 @@ export class CartService {
     this.cartItemList= [];
     this.productList.next(this.cartItemList);
   }
-
+  public getAllProduct(): Observable<any> {
+    return this.http.get("./assets/jsondata/products.data.json");
+  }
 }

@@ -17,7 +17,6 @@ export class EmailService {
   }
 
   sendEmail(url : any, data : any) {
-    console.log("email main service called  ");
     return this.http.post(url, data);
 
   }
