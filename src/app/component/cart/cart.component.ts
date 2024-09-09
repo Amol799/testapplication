@@ -35,8 +35,11 @@ export class CartComponent implements OnInit {
   }
 
   UpdateMinusCart(item : any){
+  if(item.cartCount > 1 ){
     item.cartCount =  item.cartCount-1
-    this.getCartProducts()
+    this.getCartProducts();
+  }
+
   }
 
   DeleteItemFromCart(item : any){

@@ -28,6 +28,7 @@ import { RegistrationComponent } from './component/user/registration/registratio
 import { ErrorComponent } from './component/user/error/error.component';
 import { ProfileComponent } from './component/user/profile/profile.component';
 import { ForgotpasswordComponent } from './component/user/forgotpassword/forgotpassword.component';
+import { NgOtpInputModule } from  'ng-otp-input';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ForgotpasswordComponent } from './component/user/forgotpassword/forgotp
     ReactiveFormsModule,
     HttpClientModule,
     CarouselModule,
-    CommonModule
+    CommonModule,
+    NgOtpInputModule
   ],
   providers: [
     EmailService,

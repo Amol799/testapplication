@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   username : string = "";
   password : string ="";
   mobile : string ="";
+  smsOTP : string | undefined ;
   constructor(){}
 
   ngOnInit(): void {
@@ -28,4 +29,14 @@ export class LoginComponent implements OnInit {
 
   }
 
+  onOTPChange(event: any){
+    this.smsOTP = event;
+    console.log(this.smsOTP);
+  }
+  Resend(event :any){
+
+  }
+  VerifyOtp(event : any){
+
+  }
 }
