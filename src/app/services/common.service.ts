@@ -17,5 +17,5 @@ export class CommonService {
   }
   public getPopularProduct(): Observable<any> {
     return this.http.get("./assets/jsondata/main.products.data.json");
-}
+  }
 }

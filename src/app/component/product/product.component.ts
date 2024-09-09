@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { CarouselModel } from '../../model/carousselmodel';
 import { EmailService } from '../../services/email.service';
 import { error } from 'console';
-import { Cart } from '../../model/cart.model';
 import { CartService } from '../../services/cart.service';
 import { CommonService } from '../../services/common.service';
 
@@ -14,7 +13,7 @@ import { CommonService } from '../../services/common.service';
 })
 export class ProductComponent implements OnInit {
   public productList : any =[];
-  cartTxt : string = "Add to Cart";
+
   constructor(private cartsvc : CartService, private commnsvc: CommonService){
 
   }

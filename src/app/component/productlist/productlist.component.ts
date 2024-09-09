@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../../services/common.service';
 import { CartService } from '../../services/cart.service';
+import { Common } from '../../model/cart.model';
 
 
 @Component({
@@ -9,9 +10,7 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './productlist.component.css'
 })
 export class ProductlistComponent implements OnInit {
-
-  cartTxt :string ="Add to cart"
-  public productList : any;
+  public productList : any ;
   public disable : boolean = true
   public isCartVisible : boolean = true;
   constructor(private commnsvc : CommonService,private cartsvc: CartService){
@@ -26,13 +25,18 @@ export class ProductlistComponent implements OnInit {
       item.mainbtnlabel = "See Cart";
       this.cartsvc.addToCart(item);
       this.isCartVisible  = true;
-      event.target.innerHTML = "See Cart";
+   //   event.target.innerHTML = "See Cart";
       // this.GetAllProduct();
      }
   }
   GetAllProduct(){
     this.commnsvc.getAllProduct().subscribe(data =>{
-      this.productList = data;
+      Common.productList = data;
+      //this.productList = Common.productList;
     })
+
+  }
+  get ProductList() {
+    return Common.productList;
   }
 }

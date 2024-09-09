@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class CartService {
   public cartItemList : any =[];
   public productList  = new BehaviorSubject<any>([]);
   public isProdAvalInCart : boolean = false;
-  constructor() { }
+  constructor(private http :HttpClient) { }
 
   getProducts(){
     return this.productList.asObservable();
@@ -50,5 +51,8 @@ export class CartService {
   removeAllCart(){
     this.cartItemList= [];
     this.productList.next(this.cartItemList);
+  }
+  public getAllProduct(): Observable<any> {
+    return this.http.get("./assets/jsondata/products.data.json");
   }
 }

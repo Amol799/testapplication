@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { Common } from '../../model/cart.model';
 
 @Component({
   selector: 'app-cart',
@@ -10,6 +11,7 @@ export class CartComponent implements OnInit {
   public productList : any;
   totalCartItem : number =0;
   grandTotal : number =0;
+
   constructor(private cartsvc: CartService){}
 
   ngOnInit(): void {
@@ -39,7 +41,11 @@ export class CartComponent implements OnInit {
   }
 
   DeleteItemFromCart(item : any){
-    item.mainbtnlabel = "Add Cart";
+    Common.productList.map((product: any, index: any) => {
+      if(JSON.stringify(product) === JSON.stringify(item)){
+        product.mainbtnlabel = "Add cart";
+      }
+    });
     this.cartsvc.removeCartItem(item);
   }
 }
