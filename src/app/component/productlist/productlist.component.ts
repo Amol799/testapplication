@@ -10,7 +10,7 @@ import { Common } from '../../model/cart.model';
   styleUrl: './productlist.component.css'
 })
 export class ProductlistComponent implements OnInit {
-  public productList : any ;
+  //public productList : any ;
   public disable : boolean = true
   public isCartVisible : boolean = true;
   constructor(private commnsvc : CommonService,private cartsvc: CartService){
@@ -36,7 +36,7 @@ export class ProductlistComponent implements OnInit {
     })
 
   }
-  get ProductList() {
+  get productList() {
     return Common.productList;
   }
 }
