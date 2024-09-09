@@ -30,13 +30,12 @@ export class CartComponent implements OnInit {
     )
   }
   UpdatePlusCart(item : any){
-    item.cartCount =  item.cartCount-1
+    item.cartCount =  item.cartCount+1
     this.getCartProducts();
   }
 
   UpdateMinusCart(item : any){
-    if(item.cartCount )
-    item.cartCount =  item.cartCount+1
+    item.cartCount =  item.cartCount-1
     this.getCartProducts()
   }
 

@@ -15,11 +15,11 @@
                                       <!-- <div class="cart_item_title">Quantity :  {{item.cartCount}} </div> -->
                                       <div class="cart_item_title">Price :  {{ item.mrpprice - (item.mrpprice/100 * item.discount)}}</div>
                                       <div class="d-flex mt-3">
-                                        <a (click)="UpdatePlusCart(item)" class="btn animated slideInRight" style="margin-right: 10px;">
+                                        <a (click)="UpdateMinusCart(item)" class="btn animated slideInRight" style="margin-right: 10px;">
                                           <i  class="fa fa-minus -auto text-danger"></i>
                                        </a>
                                         <h5 class="text-grey" style="margin-right: 10px;">{{item.cartCount}}</h5>
-                                        <a (click)="UpdateMinusCart(item)" class="btn slideInRight">
+                                        <a (click)="UpdatePlusCart(item)" class="btn slideInRight">
                                           <i class=" fa fa-plus mt-auto text-success"></i>
                                        </a>
                                        <a (click)="DeleteItemFromCart(item)" class="btn slideInRight" style="margin-left: 50px;">
