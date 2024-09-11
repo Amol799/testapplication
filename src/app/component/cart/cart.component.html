@@ -42,7 +42,7 @@
                   </div>
                   <div class="cart_buttons">
                     <a routerLink="/products" data-bs-dismiss="modal" class="btn btn-dark py-2 px-4 me-3 animated slideInRight">Buy More</a>
-                    <a href="https://wa.link/sn1ofe"  class="btn btn-outline-dark py-2 px-4 animated slideInRight">Buy Now</a>
+                    <a href="https://wa.link/sn1ofe"  [ngClass]="grandTotal > 0 ? '' : 'disabled' " class="btn btn-outline-dark py-2 px-4 animated slideInRight">Buy Now</a>
                   </div>
               </div>
           </div>
