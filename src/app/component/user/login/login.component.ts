@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+// import { JsonService } from '../../../services/json.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,35 +10,37 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class LoginComponent implements OnInit {
 
-
-  username : string = "";
-  password : string ="";
   mobile : string ="";
   smsOTP : string | undefined ;
-  constructor(){}
+  constructor(private userService: UserService){}
 
   ngOnInit(): void {
+      // Create a new user
+      // this.userService.createUser('John Doe', '7396609490', 'pashan pune');
+
+      // this.userService.getUser();
+      // Update an existing user
+    //  this.userService.updateUser(1, 'Jane Doe', 'jane.doe@example.com', 'newpassword456');
+
 
   }
 
-  login(){
-    console.log("userid : " + this.username  + "password :" + this.password)
-  }
-
-  register(){
-
-    console.log("userid : " + this.username  + "password :" + this.password + "mobile" + this.mobile);
-
-  }
-
-  onOTPChange(event: any){
-    this.smsOTP = event;
-    console.log(this.smsOTP);
-  }
   Resend(event :any){
 
   }
   VerifyOtp(event : any){
 
+    // console.log(this.smsOTP?.length);
+    // console.log(this.mobile);
+
+
+
+
   }
+  onOtpChange(event : any){
+    this.smsOTP = event;
+  }
+
+
+
 }
