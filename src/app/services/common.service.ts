@@ -18,4 +18,8 @@ export class CommonService {
   public getPopularProduct(): Observable<any> {
     return this.http.get("./assets/jsondata/main.products.data.json");
   }
+  GetToken(url : any, data : any) : Observable<any>  {
+    return this.http.post(url, data);
+  }
+
 }

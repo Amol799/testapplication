@@ -8,17 +8,9 @@ export class EmailService {
 
   constructor(private http: HttpClient) {}
 
-  httpGet(url : any) {
-    return this.http.get(url);
-  }
-
-  httpPost(url :any, {}) {
-    return this.http.post(url, { name: "Subrat" });
-  }
 
   sendEmail(url : any, data : any) {
     return this.http.post(url, data);
-
   }
 }
 
