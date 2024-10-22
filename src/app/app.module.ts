@@ -20,7 +20,7 @@ import { EmailComponent } from './component/email/email.component';
 import { EmailService } from './services/email.service';
 import { CommonService } from './services/common.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './component/cart/cart.component';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './component/user/login/login.component';
@@ -28,6 +28,10 @@ import { RegistrationComponent } from './component/user/registration/registratio
 import { ErrorComponent } from './component/user/error/error.component';
 import { ProfileComponent } from './component/user/profile/profile.component';
 import { ForgotpasswordComponent } from './component/user/forgotpassword/forgotpassword.component';
+import { NgOtpInputModule } from  'ng-otp-input';
+import { AuthGuard } from './gaurd/auth.gaued';
+import { AuthInterceptor } from './Auth.Interceptor';
+import { AuthService } from './services/Auth.Service';
 
 @NgModule({
   declarations: [
@@ -61,11 +65,19 @@ import { ForgotpasswordComponent } from './component/user/forgotpassword/forgotp
     ReactiveFormsModule,
     HttpClientModule,
     CarouselModule,
-    CommonModule
+    CommonModule,
+    NgOtpInputModule
   ],
   providers: [
+    AuthGuard,
     EmailService,
+    AuthService,
     CommonService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
