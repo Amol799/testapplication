@@ -32,6 +32,10 @@ import { NgOtpInputModule } from  'ng-otp-input';
 import { AuthGuard } from './gaurd/auth.gaued';
 import { AuthInterceptor } from './Auth.Interceptor';
 import { AuthService } from './services/Auth.Service';
+import { PaymentComponent } from './component/payment/payment.component';
+import { MainNavbarComponent } from './component/main-navbar/main-navbar.component';
+import { LoaderComponent } from './component/shared/loader/loader.component';
+import { UserdetailComponent } from './component/user/userdetail/userdetail.component';
 
 @NgModule({
   declarations: [
@@ -55,14 +59,18 @@ import { AuthService } from './services/Auth.Service';
     RegistrationComponent,
     ErrorComponent,
     ProfileComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    PaymentComponent,
+    MainNavbarComponent,
+    LoaderComponent,
+    UserdetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
+     ReactiveFormsModule,
     HttpClientModule,
     CarouselModule,
     CommonModule,

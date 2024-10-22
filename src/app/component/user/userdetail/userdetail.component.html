@@ -1,0 +1,47 @@
+<div class="container container justify-content-center row">
+  <div class="card border-0 shadow rounded-3 w-50">
+    <div class="card-body p-4 p-sm-5">
+      <h5 class="card-title text-center mb-5 fw-light fs-5">Welcome to Akshaj Oil</h5>
+      <form class="needs-validation" novalidate [formGroup]="userForm" (ngSubmit)="saveForm(userForm)">
+      <div class="form-floating mb-3">
+        <input type="tel"  [disabled]="true" class="form-control" formControlName="mobile" autocomplete="off" placeholder="john marsh">
+        <label for="floatingInput" class="fw-light">Mobile Number </label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="tel"  class="form-control" formControlName="name" autocomplete="off" placeholder="john marsh"
+        [class.is-invalid]="(userForm.get('name')?.touched || userForm.get('name')?.dirty) && userForm.get('name')?.invalid">
+        <label for="floatingInput" *ngIf="!(userForm.get('name')?.invalid && (userForm.get('name')?.touched || userForm.get('name')?.dirty))" class="fw-light">Full Name </label>
+        <label class="text-danger" *ngIf="(userForm.get('name')?.touched || userForm.get('name')?.dirty) && userForm.get('name')?.invalid">
+         Please enter a name.
+        </label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="tel"  class="form-control" formControlName="email" autocomplete="off" placeholder="abc@xyz.com"
+        [class.is-invalid]="(userForm.get('email')?.touched || userForm.get('email')?.dirty) && userForm.get('email')?.invalid">
+        <label for="floatingInput"  *ngIf="!((userForm.get('email')?.touched || userForm.get('email')?.dirty) && userForm.get('email')?.invalid)" class="fw-light">Email Id</label>
+        <label class="text-danger" *ngIf="(userForm.get('email')?.touched || userForm.get('email')?.dirty) && userForm.get('email')?.invalid">
+         please enter valid email address.
+        </label>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea type="tel"  class="form-control" formControlName="address" autocomplete="off" placeholder="full address" rows="4" cols="50"
+        [class.is-invalid]="(userForm.get('address')?.touched || userForm.get('address')?.dirty) && userForm.get('address')?.invalid"></textarea>
+        <label for="floatingInput"  *ngIf="!((userForm.get('address')?.touched || userForm.get('address')?.dirty) && userForm.get('address')?.invalid)" class="fw-light">Address</label>
+        <label class="text-danger" *ngIf="(userForm.get('address')?.touched || userForm.get('address')?.dirty) && userForm.get('address')?.invalid">
+          Please enter address.
+        </label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="tel"  class="form-control" formControlName="postalcode" autocomplete="off" placeholder="Postal code"
+        [class.is-invalid]="(userForm.get('postalcode')?.touched || userForm.get('postalcode')?.dirty) && userForm.get('postalcode')?.invalid">
+        <label for="floatingInput"  *ngIf="!((userForm.get('postalcode')?.touched || userForm.get('postalcode')?.dirty) && userForm.get('postalcode')?.invalid)" class="fw-light">Postal code</label>
+        <label class="text-danger" *ngIf="(userForm.get('postalcode')?.touched || userForm.get('postalcode')?.dirty) && userForm.get('postalcode')?.invalid">
+          Please postal code.
+        </label>
+      </div>
+      <button class="btn btn-outline-success  btn-login w-50" type="submit">Save details</button>
+      <button class="btn btn-outline-danger btn-login w-50"  (click)="Cancel()">Cancel</button>
+    </form>
+    </div>
+  </div>
+</div>

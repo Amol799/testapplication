@@ -1,41 +1,66 @@
    <!-- Navbar Start -->
-<div class="container-fluid sticky-top bg-success">
-    <div class="">
+<div class="container-fluid sticky-top bg-body-secondary">
+  <div class="row">
+    <div class=" text-end">
+      <button routerLink="/cart" class="btn btnsize btn-group btn-outline-light m-1 btn-link" data-bs-toggle="modal" data-bs-target="#cart-popup">
+        <i class=" nav-item fa-2x fa fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-success">{{tatalCartItem}}</div>
+      </button>
+    </div>
+    <!-- <div class="col-4">
+      <button class="btn btnsize btn-group btn-outline-light m-1 btn-primary">
+        <div class="dropdown pb-1">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+              <span class="d-none d-sm-inline mx-1">Amol</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+              <li><a class="dropdown-item" routerLink="/profile">Order</a></li>
+              <li><a class="dropdown-item" routerLink="/profile">Settings</a></li>
+              <li>
+                  <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" (click)="logout()">Sign out</a></li>
+            </div>
+      </div>
+      </button>
+
+    </div> -->
+  </div>
+    <!-- <div class="">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
-            <a routerLink="/home" class="navbar-brand">
-              <img class="img-fluid " style="height: 60px;" src="assets/Images/main_logo.png" alt="">
-            </a>
+
             <div class="m-1">
-              <button class="disabled btn btnsize btn-group btn-outline-light me-md-2 m-1" data-bs-toggle="modal"  data-bs-target="#login-popup" >
-                <i class=" nav-item fa-2x fa fa-user-o"></i>
-              </button>
-              <a  href="https://wa.link/sn1ofe" class="btn btnsize btn-group btn-outline-light m-1">
-                <i  aria-hidden="true" class="fa fa-2x fa-whatsapp "></i>
-              </a>
+
               <button class="btn btnsize btn-group btn-outline-light m-1" data-bs-toggle="modal" data-bs-target="#cart-popup">
                 <i class=" nav-item fa-2x fa fa-cart-plus"></i>
                 <div style="font-size: 10px;" class="badge bg-success">{{tatalCartItem}}</div>
               </button>
+              <div class="dropdown pb-4">
+                  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                      <span class="d-none d-sm-inline mx-1">loser</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                      <li><a class="dropdown-item" href="#">New project...</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </div>
+              </div>
             </div>
-            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto bg-success">
-                    <a routerLink="/" class="nav-item nav-link ">Home</a>
-                    <a routerLink="/about" class="nav-item nav-link ">About</a>
-                    <a routerLink="/products" class="nav-item nav-link">Products</a>
-                    <a routerLink="/contact" class="nav-item nav-link">Contact</a>
-                  </div>
-            </div>
+
         </nav>
-    </div>
+    </div> -->
 </div>
 <!-- Navbar End -->
 
 <!-- cart popup -->
-<div class="modal fade" id="cart-popup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="cart-popup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" style="margin-right: 1.3%;margin-top: 5%;">
     <div class="modal-content">
       <div class="modal-header">
@@ -46,18 +71,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<!-- login popup -->
-<div class="modal fade" id="login-popup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body" style="padding:0">
-          <app-login></app-login>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 

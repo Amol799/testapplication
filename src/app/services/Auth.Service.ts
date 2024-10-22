@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-
+import { map, tap } from 'rxjs/operators';
+//import * as Cookies from  'js-cookie';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,23 +13,22 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
 
-  login(user_name: string, user_pin: string): boolean  {
+  login(user_name: string, user_pin: string): Observable<any>   {
 
     let data = {
       username: user_name,
       password: user_pin
     }
-    this.http.post("http://localhost:3000/api/login", data).subscribe(
-      resp => {
+
+    return this.http.post("http://localhost:3000/api/login", data).pipe(
+      map(resp => {
         this.isLoggedIn = true;
-         this.token = (resp as any).token;
+        this.token = (resp as any).token;
         localStorage.setItem('authtoken', this.token);
-      },
-      err => {
-        console.log(err);
-      }
+        const tokenFromStorage = localStorage.getItem('authtoken');
+        return { isLoggedIn: this.isLoggedIn, token: this.token, tokenFromStorage };
+      })
     );
-    return this.isLoggedIn;
   }
   logout(): void {
     this.isLoggedIn = false;

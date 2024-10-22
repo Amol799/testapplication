@@ -6,13 +6,18 @@
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Welcome to Akshaj Oil</h5>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" autocomplete="off" [(ngModel)] ="mobile" placeholder="name@example.com">
+                <input type="tel" maxlength="10" minlength="10" class="form-control" id="floatingInput" autocomplete="off" [(ngModel)] ="mobile" placeholder="7396609490">
                 <label for="floatingInput" class="fw-light">Mobile Number</label>
+
               </div>
               <div class="form-floating mb-3">
-                <span class="card-title text-center mb-5 fw-light fs-5">OTP sent to {{mobile}}</span>
+                <span class="card-title text-center mb-5 fw-light fs-6">Enter Sent OTP  </span>
                 <a href="#" (click)="resendOtp()">Resend OTP</a>
-                <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:4}"></ng-otp-input>
+                <ng-otp-input (onInputChange)="onOtpChange($event)"  [config]="{length:4}"></ng-otp-input>
+              </div>
+              <div class="form-floating mb-3">
+                <span *ngIf="IsInvalid" class="card-title text-center text-danger mb-5 fw-light fs-6">{{errorText}} </span>
+
               </div>
               <div class="d-grid">
                 <button class="btn btn-primary btn-login text-uppercase fw-bold"  (click)="VerifyOtp($event)" type="submit">Sign
